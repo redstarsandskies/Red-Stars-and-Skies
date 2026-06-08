@@ -1,0 +1,303 @@
+/* ========================================
+   ABOUT PAGE STYLES
+   ======================================== */
+
+/* ========================================
+   ABOUT HERO SECTION
+   ======================================== */
+.about-hero {
+    background: linear-gradient(135deg, var(--charcoal) 0%, #2C3E50 100%);
+    color: var(--white);
+    padding: var(--spacing-2xl) 0;
+    text-align: center;
+    border-bottom: 3px solid var(--primary-red);
+}
+
+.about-hero h1 {
+    color: var(--white);
+    font-size: var(--h1);
+    position: relative;
+    display: inline-block;
+}
+
+.about-hero h1::after {
+    content: '';
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary-red), var(--burgundy));
+    border-radius: 2px;
+}
+
+/* ========================================
+   MISSION SECTION
+   ======================================== */
+.mission-section {
+    padding: var(--spacing-2xl) 0;
+    background: linear-gradient(180deg, #F5F5F5 0%, #FFFFFF 100%);
+}
+
+.mission-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-2xl);
+    align-items: center;
+}
+
+.mission-text h2 {
+    color: var(--charcoal);
+    margin-bottom: var(--spacing-lg);
+    position: relative;
+    padding-bottom: var(--spacing-md);
+}
+
+.mission-text h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary-red), var(--burgundy));
+    border-radius: 2px;
+}
+
+.mission-text p {
+    color: var(--dark-gray);
+    margin-bottom: var(--spacing-lg);
+    line-height: 1.9;
+    font-size: var(--body);
+}
+
+.mission-text p:last-child {
+    margin-bottom: 0;
+}
+
+.mission-visual {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.visual-element {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(220, 20, 60, 0.1) 0%, rgba(220, 20, 60, 0) 70%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.large-asterisk {
+    font-size: 10rem;
+    color: var(--primary-red);
+    opacity: 0.3;
+    animation: float 6s ease-in-out infinite;
+}
+
+/* ========================================
+   COVERAGE SECTION
+   ======================================== */
+.coverage-section {
+    padding: var(--spacing-2xl) 0;
+    background: linear-gradient(180deg, #FFFFFF 0%, #F5F5F5 100%);
+    border-top: 1px solid var(--light-gray);
+}
+
+.coverage-section h2 {
+    text-align: center;
+    color: var(--charcoal);
+    margin-bottom: var(--spacing-xl);
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+.coverage-section h2::after {
+    content: '';
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary-red), var(--burgundy));
+    border-radius: 2px;
+}
+
+.coverage-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--spacing-xl);
+    margin-top: var(--spacing-xl);
+}
+
+.coverage-card {
+    background: var(--white);
+    padding: var(--spacing-xl);
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: var(--shadow-md);
+    transition: var(--transition);
+    border-top: 4px solid var(--primary-red);
+}
+
+.coverage-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 50px rgba(220, 20, 60, 0.15);
+}
+
+.coverage-card h3 {
+    color: var(--charcoal);
+    margin-bottom: var(--spacing-md);
+    font-size: var(--h3);
+}
+
+.coverage-card p {
+    color: var(--dark-gray);
+    line-height: 1.8;
+    margin-bottom: 0;
+}
+
+/* ========================================
+   CONTACT SECTION
+   ======================================== */
+.contact-section {
+    padding: var(--spacing-2xl) 0;
+    background: linear-gradient(180deg, #F5F5F5 0%, #FFFFFF 100%);
+    border-top: 1px solid var(--light-gray);
+}
+
+.contact-section h2 {
+    text-align: center;
+    color: var(--charcoal);
+    margin-bottom: var(--spacing-xl);
+}
+
+.contact-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-xl);
+}
+
+.contact-info,
+.contact-form {
+    background: var(--white);
+    padding: var(--spacing-xl);
+    border-radius: 8px;
+    box-shadow: var(--shadow-md);
+}
+
+.contact-info h3,
+.contact-form h3 {
+    color: var(--charcoal);
+    margin-bottom: var(--spacing-lg);
+    font-size: var(--h3);
+}
+
+.contact-info p {
+    color: var(--dark-gray);
+    margin-bottom: var(--spacing-md);
+    line-height: 1.8;
+}
+
+.contact-info a {
+    color: var(--primary-red);
+    text-decoration: none;
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+.contact-info a:hover {
+    color: var(--dark-red);
+    text-decoration: underline;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: var(--spacing-sm);
+    margin-bottom: var(--spacing-md);
+    border: 2px solid var(--medium-gray);
+    border-radius: 4px;
+    font-family: var(--font-sans);
+    font-size: var(--body);
+    transition: var(--transition);
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: var(--primary-red);
+    box-shadow: 0 0 0 3px rgba(220, 20, 60, 0.1);
+}
+
+.contact-form button {
+    width: 100%;
+}
+
+/* ========================================
+   RESPONSIVE - TABLET
+   ======================================== */
+@media (max-width: 1024px) {
+    .mission-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .mission-visual {
+        order: -1;
+    }
+    
+    .contact-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .visual-element {
+        width: 250px;
+        height: 250px;
+    }
+    
+    .large-asterisk {
+        font-size: 8rem;
+    }
+}
+
+/* ========================================
+   RESPONSIVE - MOBILE
+   ======================================== */
+@media (max-width: 768px) {
+    .about-hero {
+        padding: var(--spacing-xl) 0;
+    }
+    
+    .about-hero h1 {
+        font-size: var(--h2);
+    }
+    
+    .mission-section {
+        padding: var(--spacing-xl) 0;
+    }
+    
+    .contact-section {
+        padding: var(--spacing-xl) 0;
+    }
+    
+    .contact-info,
+    .contact-form {
+        padding: var(--spacing-lg);
+    }
+    
+    .visual-element {
+        width: 200px;
+        height: 200px;
+    }
+    
+    .large-asterisk {
+        font-size: 6rem;
+    }
+}
