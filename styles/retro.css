@@ -1,0 +1,246 @@
+/* ========================================
+   RETRO 90s/2000s PAGE STYLES
+   ======================================== */
+
+/* ========================================
+   RETRO PAGE CONTAINER
+   ======================================== */
+.retro-page {
+    background: #CCCCCC;
+    padding: var(--spacing-xl) 0;
+    min-height: calc(100vh - 300px);
+}
+
+/* ========================================
+   BROWSER WINDOW FRAME (90s Style)
+   ======================================== */
+.browser-window {
+    max-width: 1000px;
+    margin: 0 auto;
+    background: #C0C0C0;
+    border: 3px solid;
+    border-color: #DFDFDF #808080 #808080 #DFDFDF;
+    box-shadow: 1px 1px 0 0 #000000;
+    font-family: 'MS Sans Serif', Arial, sans-serif;
+}
+
+.browser-header {
+    background: linear-gradient(to right, #000080, #1084D7);
+    color: #FFFFFF;
+    padding: 2px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.browser-buttons {
+    display: flex;
+    gap: 3px;
+}
+
+.browser-btn {
+    width: 16px;
+    height: 14px;
+    border: 1px solid;
+    border-color: #DFDFDF #808080 #808080 #DFDFDF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    color: #000;
+    cursor: pointer;
+}
+
+.browser-btn.red {
+    background: #FF0000;
+}
+
+.browser-btn.yellow {
+    background: #FFFF00;
+}
+
+.browser-btn.green {
+    background: #00B050;
+}
+
+.browser-url {
+    flex: 1;
+    background: #FFFFFF;
+    border: 1px inset;
+    padding: 2px 5px;
+    font-size: 11px;
+    color: #000000;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.browser-url span {
+    font-family: 'Courier New', monospace;
+}
+
+/* ========================================
+   BROWSER CONTENT
+   ======================================== */
+.browser-content {
+    background: #FFFFFF;
+    padding: 15px;
+    overflow-x: auto;
+}
+
+.retro-content {
+    font-family: Georgia, serif;
+}
+
+.retro-header {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+marquee {
+    font-size: 12px !important;
+    line-height: 1.5;
+}
+
+.retro-section {
+    margin-bottom: 30px;
+}
+
+.retro-section h2 {
+    font-family: Georgia, serif !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.retro-section table {
+    margin-bottom: 20px !important;
+}
+
+.retro-section table td {
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    line-height: 1.6;
+    vertical-align: top;
+}
+
+.retro-section table h3 {
+    margin: 0 0 10px 0 !important;
+    font-size: 14px !important;
+    font-family: Arial, sans-serif !important;
+    color: #000000 !important;
+}
+
+.retro-section table p {
+    margin: 0 !important;
+    font-size: 13px;
+    color: #000000;
+}
+
+hr {
+    margin: 20px 0;
+}
+
+/* ========================================
+   RETRO LINKS & ANIMATIONS
+   ======================================== */
+.retro-content a {
+    color: #0000CC;
+    text-decoration: underline;
+}
+
+.retro-content a:visited {
+    color: #551A8B;
+}
+
+.retro-content a:hover {
+    color: #FF0000;
+}
+
+/* ========================================
+   RESPONSIVE - TABLET
+   ======================================== */
+@media (max-width: 1024px) {
+    .browser-window {
+        margin: 0 var(--spacing-md);
+    }
+    
+    .retro-section table {
+        font-size: 12px !important;
+    }
+}
+
+/* ========================================
+   RESPONSIVE - MOBILE
+   ======================================== */
+@media (max-width: 768px) {
+    .retro-page {
+        padding: var(--spacing-lg) 0;
+    }
+    
+    .browser-window {
+        margin: 0 var(--spacing-sm);
+        border: 2px solid;
+    }
+    
+    .browser-header {
+        padding: 1px;
+    }
+    
+    .browser-content {
+        padding: 10px;
+    }
+    
+    .retro-content {
+        font-size: 12px;
+    }
+    
+    .retro-section h2 {
+        font-size: 1.2em !important;
+        padding: 5px !important;
+    }
+    
+    .retro-section table td {
+        font-size: 11px !important;
+        padding: 8px !important;
+    }
+    
+    .retro-section table h3 {
+        font-size: 12px !important;
+    }
+    
+    .retro-section table p {
+        font-size: 11px !important;
+    }
+    
+    marquee {
+        font-size: 10px !important;
+        padding: 5px !important;
+    }
+}
+
+/* ========================================
+   RETRO ANIMATIONS
+   ======================================== */
+@keyframes blink {
+    0%, 49% { opacity: 1; }
+    50%, 100% { opacity: 0; }
+}
+
+.blink {
+    animation: blink 1s infinite;
+}
+
+/* ========================================
+   PRINT STYLES
+   ======================================== */
+@media print {
+    .navbar,
+    .footer {
+        display: none;
+    }
+    
+    .browser-window {
+        border: 1px solid #000;
+        box-shadow: none;
+    }
+}
